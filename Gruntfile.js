@@ -4,6 +4,12 @@ module.exports = function(grunt) {
     require('jit-grunt')(grunt);
 
     grunt.initConfig({
+        watch: {
+            less: {
+                files: ['less/*.less'],
+                tasks: ['less-autoprefix'],
+            },
+        },
         less: {
             dev: {
                 files: [{
